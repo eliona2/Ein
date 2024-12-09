@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rei's Portfolio</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="eme.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="image/logo.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="Rei.html">Home</a></li>
+                    <li><a href="Mae.html">About</a></li>
+                    <li><a href="ein.html">Portfolio</a></li>
+                    <li><a href="eme.html">Contacts</a></li>
+                    <i class="ri-close-line" onclick="closemenu()"></i>
+                </ul>
+                <i class="ri-menu-line" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </div>
+    <section class="contact">
+        <div class="content">
+        </div>
+        <div class="contact-container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="ri-map-pin-fill"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>Central Park West, <br>Fort Bonifacio Global City.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="ri-mail-fill"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>elionasydrine@gmail.com</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="ri-phone-fill"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>09154763692</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-container-right">
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-right">
+                    <input type="hidden" name="access_key" value="f9f278ce-a4e5-4673-a5fe-427fbaf96ee0">
+                    <div class="contact-right-title">
+                        <h2>Get in Touch</h2>
+                        <hr>
+                    </div>
+                    <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+                    <input type="text" name="email" placeholder="Your Email" class="contact-inputs" required>
+                    <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+
+
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+        
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+        
+    </script>
+        

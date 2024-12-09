@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    color: #000000;
+    background-image: url(image/Snowflakes.avif)
+}
+.logo{
+    width: 140px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #fdfdfd;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.container{
+    padding: 10px 10%;
+}
+.contact{
+    position: relative;
+    padding: 50px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+.contact-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    font-size: 22px;
+}
+.contact-container .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.contact-container .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.contact-container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #6d6767;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40%;
+    font-size: 22px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact-container .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #000000;
+    flex-direction: column;
+    font-weight: 300;
+}
+.contact-container .contactInfo .box .text h3{
+    color: #000000
+}
+.contact-container-right{
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+}
+.contact-right{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+}
+.contact-right-title h2{
+    font-weight: 600;
+    color: black;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+.contact-right-title hr{
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: rgb(161, 159, 155);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.contact-inputs{
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    font-weight: 500;
+    color: black;
+    border-radius: 50px;
+}
+.contact-right textarea{
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+.contact-inputs:focus{
+    border: 2px solid #5e5956;
+}
+.contact-inputs::placeholder{
+    color: black;
+}
+.contact-right button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #201a1a;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg,#5e5956,#fff);
+}
+/* css for small screen */
+nav .ri-close-line{
+    display: none;
+}
+nav .ri-menu-line{
+    display: none;
+}
+@media (max-width: 991px){
+    .contact{
+        padding: 50px;
+    }
+    .contact-container{
+        flex-direction: column;
+    }
+    .contact-container .contactInfo, .contactForm{
+        margin-bottom: 40px;
+        width: 100%;
+    }
+    .logo{
+        width: 100px;
+    }
+    nav .ri-close-line{
+        display: block;
+        font-size: 25px;
+    }
+    nav .ri-menu-line{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #717b8b;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .ri-close-line{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+}
+@media (max-width: 800px){
+    .contact-inputs{
+        width: 80vw;
+    }
+}
